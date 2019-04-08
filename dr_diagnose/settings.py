@@ -69,7 +69,7 @@ TEMPLATES = [
 ]
 
 STATICFILES_DIRS = (
- os.path.join(BASE_DIR,"static").replace('\\','/'),
+ os.path.join(BASE_DIR, "static").replace('\\','/'),
 )
 
 WSGI_APPLICATION = 'dr_diagnose.wsgi.application'

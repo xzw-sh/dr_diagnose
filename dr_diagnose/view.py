@@ -5,10 +5,14 @@ from urllib.parse import unquote
 import time
 import os
 import base64
+import sys
 from django.views.decorators.clickjacking import xframe_options_exempt
 import dr_diagnose.dr_predict as dr_predict
+import dr_diagnose
 
-img_root_dir = '/my_code/PythonCode/dr_diagnose/zqxt_tmp'
+current_path = os.path.dirname(dr_diagnose.__file__)
+PROJECT_ROOT = os.path.dirname(current_path)
+img_root_dir = os.path.join(PROJECT_ROOT, 'zqxt_tmp')
 
 @xframe_options_exempt
 def home(request):

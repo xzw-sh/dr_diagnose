@@ -5,7 +5,8 @@ from dr_diagnose.Net import ImgNet
 import cv2
 import numpy as np
 
-model_path = "/my_code/PythonCode/dr_diagnose/dr_diagnose/saved_models"
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(PROJECT_ROOT, 'saved_models')
 model = ImgNet.build(input_shape=(512, 512, 3))
 model.load_weights(os.path.join(model_path, '9_pre_model.h5'))
 graph = tf.get_default_graph()
