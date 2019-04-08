@@ -3,7 +3,8 @@ A efficient and automated DR diagnosis system,everyone can click on this [link](
 
 ## Requirements 
 This code requires you have TensorFlow 1.12, OpenCV 4.0.1,Django 2.0 or greater installed. To ensure you're up to date, run:   
-    pip install tensorflow &  opencv-python & django
+    
+    pip install tensorflow,opencv-python,django
 
 ## Instruction
 
