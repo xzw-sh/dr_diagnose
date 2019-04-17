@@ -1,4 +1,4 @@
-dr_diagnose/saved_models/*.h5
+# dr_diagnose/saved_models/*.h5
 .idea/*
 # Byte-compiled / optimized / DLL files
 __pycache__/
