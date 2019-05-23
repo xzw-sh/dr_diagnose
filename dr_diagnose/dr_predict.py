@@ -60,26 +60,3 @@ def get_predict(img_path):
                 return -1
             continue
 
-
-
-
-
-
-
-    with graph.as_default():
-        results = model.predict(x)
-
-    predict_value = np.argmax(results)
-    if predict_value > 0:
-        symbol = "diseased"
-        with graph.as_default():
-            full_results = full_model.predict(x);
-            full_predict_value = np.argmax(full_results)
-            full_predict_value = full_predict_value + 1;
-            print(" full_predict_value is " + str(full_predict_value))
-            return str(full_predict_value);
-    else:
-        return "0"
-
-
-
