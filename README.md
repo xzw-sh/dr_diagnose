@@ -10,5 +10,5 @@ This code requires you have TensorFlow 1.12, OpenCV 4.0.1,Django 2.0 or greater 
     pip install tensorflow,opencv-python,django
 
 ## Dynamic representation of the diagnostic process
-![](templates/images/show.gif)
+![](static/images/show.gif)
 

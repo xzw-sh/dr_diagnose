@@ -17,12 +17,14 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
 from django.views.static import serve
-from dr_diagnose import view as dr_view
+from dr_diagnose import view as my_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^$', dr_view.home),
-    url(r'^main', dr_view.main),
-    url(r'tangniaobing', dr_view.detect),
+    url(r'^$', my_view.home),
+    url(r'^main', my_view.main),
+    url(r'tangniaobing', my_view.detect),
     url(r'^zqxt_tmp/(?P<path>.*)$', serve, {'document_root': 'zqxt_tmp'}),
+    url(r'^detection_img/(?P<path>.*)$', serve, {'document_root': 'detection_img'}),
+    url(r'^images/(?P<path>.*)$', serve, {'document_root': 'static/images'}),
 ]

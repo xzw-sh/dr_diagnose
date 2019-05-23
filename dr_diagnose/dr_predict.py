@@ -5,6 +5,9 @@ from dr_diagnose.Net import ImgNet
 import cv2
 import numpy as np
 
+# gpu_options = tf.GPUOptions(allow_growth=True)
+# sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
+
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 model_path = os.path.join(PROJECT_ROOT, 'saved_models')
 model = ImgNet.build(input_shape=(512, 512, 3))
@@ -59,4 +62,5 @@ def get_predict(img_path):
             if i == max_Iterater - 1:
                 return -1
             continue
+
 
